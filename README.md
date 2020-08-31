@@ -117,14 +117,16 @@ SSH into the control node and follow the steps below:
 
    5. Run the playbook, and navigate to `http://52.160.91.182:5601/app/kibana` to check that the installation worked as expected.
 
-   6. Steps for Filebeat Installation:
+   6. For Filebeat Installation:
       - Install Filebeat.
       - Create the Filebeat configuration file.
       - Create the filebeat installation playbook.
       - Verify the installation and playbook.
           - The following screenshot displays the results: https://github.com/Satuppe1/ELK-Stack-Deployment/blob/master/Images/Filebeat%20Screenshot%20.png
-   7.  Repeat for Metricbeat Installation.
- 
+   7.  For Metricbeat Installation.
+       - Repeat same steps for Metribeat installation.
+         - The following screenshot displays the results: https://github.com/Satuppe1/ELK-Stack-Deployment/blob/master/Images/Metricbeat%20Screenshot%20.png
+       
 How do you specify which machine to install the ELK server on versus which to install Filebeat on?
 
 In order to use Ansible to configure the ELK server you need to edit the inventory file `nano /etc/ansible/hosts`.  Add the group call `[elk]` and specify the IP address of the VM you created.  Once you created the `[elk]` group,  create the playbook and configure it.  The `hosts` option in the header specifies which machines to run a set of tasks against, which in this case is the `elk` group.  This allows you to run certain playbooks on some machines, but not on others.
