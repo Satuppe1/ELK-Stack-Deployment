@@ -115,7 +115,7 @@ SSH into the control node and follow the steps below:
 ```
    4. Create the `elk_playbook.yml` file.  Copy the playbook to the `/etc/ansible/roles` directory.  This is the directory that will contain the ansible playbooks.
 
-   5. Run the playbook, and navigate to `http://52.160.91.182:5601/app/kibana` to check that the installation worked as expected.
+   5. Run the playbook, and navigate to `http://<ELK_server_public_IP>/app/kibana` to check that the installation worked as expected.
 
    6. For Filebeat Installation:
       - Install Filebeat.
@@ -145,7 +145,7 @@ In order to use Ansible to configure the ELK server you need to edit the invento
 
 Use the following command to connect to your jump box.
 ```
-ssh sysadmin@<jump box external IP>
+ssh sysadmin@<jump_box_public_IP>
 ```
 Use the following commands to connect to the Ansible container in the Jump Box.
 ```
