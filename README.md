@@ -49,14 +49,14 @@ Machines within the network can only be accessed by the Jump Box (10.0.0.4) via 
 
 A summary of the access policies in place can be found in the table below.
 
-| Name          | Publicly Accessible | Allowed IP Address |
-|---------------|---------------------|:------------------:|
-| Jump Box      | No                  | 96.253.65.11       |
-| Web-1         | No                  | 10.0.0.4           |
-| Web-2         | No                  | 10.0.0.4           |
-| Web-3         | No                  | 10.0.0.4           |
-| Red-Elk       | No                  | 96.253.65.11       |
-| Load Balancer | Yes                 | Any                |
+| Name          | Publicly Accessible | Allowed IP Addresses  |
+|---------------|---------------------|:---------------------:|
+| Jump Box      | No                  | 96.253.65.11          |
+| Web-1         | No                  | 10.0.0.4              |
+| Web-2         | No                  | 10.0.0.4              |
+| Web-3         | No                  | 10.0.0.4              |
+| Red-Elk       | No                  | 96.253.65.11, 10.0.0.4|
+| Load Balancer | Yes                 | Any                   |
 
 ## Elk Configuration
 
