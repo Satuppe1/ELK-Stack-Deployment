@@ -1,4 +1,4 @@
-# Automated ELK Stack Deployment
+## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
@@ -14,13 +14,13 @@ This document contains the following details:
   - Machines Being Monitored
 - How to Use the Ansible Build
 
-**Description of the Topology**
+## Description of the Topology  
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing plays an important role in security.  It ensures that the application will be highly available by distributing incoming network traffic across multiple backend servers to defend against distributed denial-of-service attacks (DDoS).  This ensures no single servers bear too much demand and possibly breaks down. 
 
-The jump box can be accessed via port 22 and serves as an SSH gateway to the network,   isolating access to a private network.
+The jump box can be accessed via port 22 and serves as an SSH gateway to the network, isolating access to a private network.
 
 Integrating an ELK (Elasticsearch, Logstash, and Kibana) server allows users to easily monitor the vulnerable VMs for changes to the servers and system logs.
 
@@ -30,32 +30,15 @@ Metricbeat collects metrics and statistics on the system, such as uptime, CPU us
 
 The configuration details of each machine may be found below.
 
-Name
-Function
-IP Address
-Operation System
-Jump Box
-Gateway
-10.0.0.4
-Linux
-Web-1
-Web Server
-10.0.0.10
-Linux
-Web-2
-Web Server
-10.0.0.11
-Linux
-Web-3
-Web Server
-10.0.0.12
-Linux
-Red-Elk
-ELK Stack
-10.1.0.4
-Linux
+| Name     | Function   | IP Address | Operation System |
+|----------|------------|:----------:|------------------|
+| Jump Box | Gateway    | 10.0.0.4   | Linux            |
+| Web-1    | Web Server | 10.0.0.10  | Linux            |
+| Web-2    | Web Server | 10.0.0.11  | Linux            |
+| Web-3    | Web Server | 10.0.0.12  | Linux            |
+| Red-Elk  | ELK Stack  | 10.1.0.4   | Linux            |
 
-**Access Policies**
+## Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
@@ -65,40 +48,27 @@ Machines within the network can only be accessed by the Jump Box (10.0.0.4) via 
 
 A summary of the access policies in place can be found in the table below.
 
-Name
-Publicly Accessible
-Allowed IP Addresses
-Jump Box
-No
-96.253.65.11
-Web-1
-No
-10.0.0.4
-Web-2
-No
-10.0.0.4
-Web-3
-No
-10.0.0.4
-Red-Elk
-No
-96.253.65.11
-Load Balancer
-Yes
-Any
+| Name          | Publicly Accessible | Allowed IP Address |
+|---------------|---------------------|:------------------:|
+| Jump Box      | No                  | 96.253.65.11       |
+| Web-1         | No                  | 10.0.0.4           |
+| Web-2         | No                  | 10.0.0.4           |
+| Web-3         | No                  | 10.0.0.4           |
+| Red-Elk       | No                  | 96.253.65.11       |
+| Load Balancer | Yes                 | Any                |
 
-**Elk Configuration**
+## Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is agentless. It does not require agents to be installed on remote systems in order to manage or configure the systems.  Making it efficient and consistent with each deployment.  
 
 The playbook implements the following tasks:
-Config Elk VM with Docker
-Increase Virtual Memory
-Install Docker
-Install pip3
-Install Docker Python module
-Download and launch a docker elk container
-Enables docker service
+- Config Elk VM with Docker
+- Increase Virtual Memory
+- Install Docker
+- Install pip3
+- Install Docker Python module
+- Download and launch a docker elk container
+- Enables docker service
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
