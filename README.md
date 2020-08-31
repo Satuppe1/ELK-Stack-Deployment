@@ -76,16 +76,16 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![alt text](https://github.com/Satuppe1/ELK-Stack-Deployment/blob/master/Images/Docker%20ps%20Screenshot.png)
 
-**Target Machines & Beats**
+## Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
-Web-1 (10.0.0.10)
-Web-2 (10.0.0.11)
-Web-3 (10.0.0.12)
+- Web-1 (10.0.0.10)
+- Web-2 (10.0.0.11)
+- Web-3 (10.0.0.12)
 
 We have installed the following Beats on these machines:
-Filebeat
-Metricbeat
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
@@ -93,14 +93,14 @@ Filebeat monitors and collects data about the file system.  It enables analysts 
 
 Metricbeat records metrics and services running on the server.
 
-**Using the Playbook**
+## Using the Playbook
 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-Copy the configuration file to Ansible container.
+ 1. Copy the configuration file to Ansible container.
 
-Update the Ansible `hosts` file to make Ansible run the playbook on a specific machine.
+ 2. Update the Ansible `hosts` file to make Ansible run the playbook on a specific machine.
 
 # /etc/ansible/hosts
  [webservers]
@@ -111,7 +111,7 @@ Update the Ansible `hosts` file to make Ansible run the playbook on a specific m
  [elk]
  10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
-Create the `elk_playbook.yml` file.  Copy the playbook to the `/etc/ansible/roles` directory.  This is the directory that will contain the ansible playbooks.
+  4. Create the `elk_playbook.yml` file.  Copy the playbook to the `/etc/ansible/roles` directory.  This is the directory that will contain the ansible playbooks.
 
 Run the playbook, and navigate to `http://52.160.91.182:5601/app/kibana` to check that the installation worked as expected.
 
