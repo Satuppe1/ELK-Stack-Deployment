@@ -144,19 +144,19 @@ Use the following command to connect to your jump box.
 ssh sysadmin@<jump box external IP>
 ```
 Use the following commands to connect to the Ansible container in the Jump Box.
-
+```
 sudo docker container list -a
 sudo docker start <container_name>
 sudo docker attach <container_name>
-
+```
 Use the following command to run your playbook.
-	
+```	
 ansible-playbook  /etc/ansible/roles/elk_playbook.yml
-
+```
 Use the following command to edit or update your playbook.
-
+```
 nano /etc/ansible/roles/elk_playbook.yml
- 
+``` 
 
 
 
