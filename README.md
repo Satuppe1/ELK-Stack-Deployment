@@ -124,7 +124,7 @@ SSH into the control node and follow the steps below:
       - Verify the installation and playbook.
           - The following screenshot displays the results: https://github.com/Satuppe1/ELK-Stack-Deployment/blob/master/Images/Filebeat%20Screenshot%20.png
    7.  For Metricbeat Installation.
-       - Repeat same steps for Metribeat installation.
+       - Repeat the same steps for Metribeat installation.
          - The following screenshot displays the results: https://github.com/Satuppe1/ELK-Stack-Deployment/blob/master/Images/Metricbeat%20Screenshot%20.png
        
 How do you specify which machine to install the ELK server on versus which to install Filebeat on?
