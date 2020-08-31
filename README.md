@@ -127,7 +127,6 @@ SSH into the control node and follow the steps below:
 How do you specify which machine to install the ELK server on versus which to install Filebeat on?
 In order to use Ansible to configure the ELK server you need to edit the inventory file `nano /etc/ansible/hosts`.  Add a group call `[elk]` and specify the IP address of the VM you created.  Once you created the `[elk]` group,  create a playbook and configure it.  The `hosts` option in the header specifies which machines to run a set of tasks against, which is the `elk` group.  This allows you to run certain playbooks on some machines, but not on others.
 
-
 ```---
 - name: Config elk VM with Docker
   hosts: elk
@@ -137,16 +136,13 @@ In order to use Ansible to configure the ELK server you need to edit the invento
   - name: Install Packages
   # Etc.
 ```  
-  
-
-
 
 Commands to download the playbook, update the files, etc.
 
 Use the following command to connect to your jump box.
-
+```
 ssh sysadmin@<jump box external IP>
-
+```
 Use the following commands to connect to the Ansible container in the Jump Box.
 
 sudo docker container list -a
