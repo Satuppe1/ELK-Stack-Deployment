@@ -153,16 +153,19 @@ sudo docker container list -a
 sudo docker start <container_name>
 sudo docker attach <container_name>
 ```
-Use the following command to run your playbook.
+Use the following command to run the playbook.
 ```	
 ansible-playbook  /etc/ansible/roles/elk_playbook.yml
 ```
-Use the following command to edit or update your playbook.
+Use the following command to edit or update the playbook.
 ```
 nano /etc/ansible/roles/elk_playbook.yml
 ``` 
-
-
+Use the following commands to download the playbook once you have navigated to the Ansible container.
+```
+cd /etc/ansible/roles
+curl -O https://github.com/Satuppe1/ELK-Stack-Deployment/blob/master/Ansible/elk_playbook.yml
+```
 
 	
 
