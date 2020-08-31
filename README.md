@@ -89,9 +89,9 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-Filebeat monitors and collects data about the file system.  It enables analysts to monitor files for suspicious activity.
+- Filebeat monitors and collects data about the file system.  It enables analysts to monitor files for suspicious activity.
 
-Metricbeat records metrics and services running on the server.
+- Metricbeat records metrics and services running on the server.
 
 ## Using the Playbook
 
@@ -102,7 +102,8 @@ SSH into the control node and follow the steps below:
 
   2. Update the Ansible `hosts` file to make Ansible run the playbook on a specific machine.
 
-# /etc/ansible/hosts
+```
+ /etc/ansible/hosts
  [webservers]
  10.0.0.4 ansible_python_interpreter=/usr/bin/python3
  10.0.0.5 ansible_python_interpreter=/usr/bin/python3
@@ -110,7 +111,7 @@ SSH into the control node and follow the steps below:
 
  [elk]
  10.1.0.4 ansible_python_interpreter=/usr/bin/python3
-
+```
    4. Create the `elk_playbook.yml` file.  Copy the playbook to the `/etc/ansible/roles` directory.  This is the directory that will contain the ansible playbooks.
 
    5. Run the playbook, and navigate to `http://52.160.91.182:5601/app/kibana` to check that the installation worked as expected.
@@ -124,9 +125,10 @@ SSH into the control node and follow the steps below:
    7.  Repeat for Metricbeat Installation.
  
 How do you specify which machine to install the ELK server on versus which to install Filebeat on?
-In order to use Ansible to configure the ELK server you need to edit the inventory file `nano /etc/ansible/hosts’.  Add a group call `[elk]` and specify the IP address of the VM you created.  Once you created the `[elk]` group,  create a playbook and configure it.  The `hosts` option in the header specifies which machines to run a set of tasks against, which is the `elk` group.  This allows you to run certain playbooks on some machines, but not on others.
+In order to use Ansible to configure the ELK server you need to edit the inventory file `nano /etc/ansible/hosts`.  Add a group call `[elk]` and specify the IP address of the VM you created.  Once you created the `[elk]` group,  create a playbook and configure it.  The `hosts` option in the header specifies which machines to run a set of tasks against, which is the `elk` group.  This allows you to run certain playbooks on some machines, but not on others.
 
----
+
+```---
 - name: Config elk VM with Docker
   hosts: elk
   remote_user: sysadmin
@@ -134,6 +136,8 @@ In order to use Ansible to configure the ELK server you need to edit the invento
   tasks:
   - name: Install Packages
   # Etc.
+```  
+  
 
 
 
