@@ -98,9 +98,9 @@ Metricbeat records metrics and services running on the server.
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
- 1. Copy the configuration file to Ansible container.
+  1. Copy the configuration file to Ansible container.
 
- 2. Update the Ansible `hosts` file to make Ansible run the playbook on a specific machine.
+  2. Update the Ansible `hosts` file to make Ansible run the playbook on a specific machine.
 
 # /etc/ansible/hosts
  [webservers]
@@ -111,17 +111,17 @@ SSH into the control node and follow the steps below:
  [elk]
  10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
-  4. Create the `elk_playbook.yml` file.  Copy the playbook to the `/etc/ansible/roles` directory.  This is the directory that will contain the ansible playbooks.
+   4. Create the `elk_playbook.yml` file.  Copy the playbook to the `/etc/ansible/roles` directory.  This is the directory that will contain the ansible playbooks.
 
-Run the playbook, and navigate to `http://52.160.91.182:5601/app/kibana` to check that the installation worked as expected.
+   5. Run the playbook, and navigate to `http://52.160.91.182:5601/app/kibana` to check that the installation worked as expected.
 
-Steps for Filebeat Installation:
-Install Filebeat.
-Create the Filebeat configuration file.
-Create the filebeat installation playbook.
-Verify the installation and playbook.
+   6. Steps for Filebeat Installation:
+   - Install Filebeat.
+   - Create the Filebeat configuration file.
+   - Create the filebeat installation playbook.
+   - Verify the installation and playbook.
 
-Repeat for Metricbeat Installation.
+   7.  Repeat for Metricbeat Installation.
  
 How do you specify which machine to install the ELK server on versus which to install Filebeat on?
 In order to use Ansible to configure the ELK server you need to edit the inventory file `nano /etc/ansible/hosts’.  Add a group call `[elk]` and specify the IP address of the VM you created.  Once you created the `[elk]` group,  create a playbook and configure it.  The `hosts` option in the header specifies which machines to run a set of tasks against, which is the `elk` group.  This allows you to run certain playbooks on some machines, but not on others.
