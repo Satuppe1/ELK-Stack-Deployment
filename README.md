@@ -62,7 +62,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is agentless. It does not require agents to be installed on remote systems in order to manage or configure the systems.  Making it efficient and consistent with each deployment.  
 
-The playbook implements the following tasks:
+The ELK playbook implements the following tasks:
 - Config Elk VM with Docker
 - Increase Virtual Memory
 - Install Docker
