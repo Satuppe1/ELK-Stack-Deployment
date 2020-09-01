@@ -92,7 +92,7 @@ These Beats allow us to collect the following information from each machine:
 
 - Filebeat monitors and collects data about the file system.  It enables analysts to monitor files for suspicious activity.
 
-- Metricbeat records metrics and services running on the server.
+- Metricbeat records metrics and services running on the servers.
 
 ## Using the Playbook
 
