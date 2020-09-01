@@ -131,14 +131,21 @@ How do you specify which machine to install the ELK server on versus which to in
 
 In order to use Ansible to configure the ELK server you need to edit the inventory file `nano /etc/ansible/hosts`.  Add the group call `[elk]` and specify the IP address of the VM you created.  Once you created the `[elk]` group,  create the playbook and configure it.  The `hosts` option in the header specifies which machines to run a set of tasks against, which in this case is the `elk` group.  This allows you to run certain playbooks on some machines, but not on others.  See snippet below:
 
-```---
+```
+---
 - name: Config elk VM with Docker
   hosts: elk
   remote_user: sysadmin
   become: true
   tasks:
   - name: Install Packages
-  # Etc.
+    sysctl:
+      name: vm.max_map_count
+      value: '262144'
+      state: present
+      reload: yes
+      
+#Use shell module
 ```  
 
 ## Commands to download the playbook, update the files, etc.
